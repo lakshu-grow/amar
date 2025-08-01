@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mark Attendance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="attendance-container">
+    <h1>Mark Attendance</h1>
+    <form action="AttendanceServlet" method="post">
+      <label>Cadet Username:</label>
+      <input type="text" name="username" placeholder="Cadet username" required>
+      <label>Date:</label>
+      <input type="date" name="date" required>
+      <label>Status:</label>
+      <select name="status">
+        <option value="Present">Present</option>
+        <option value="Absent">Absent</option>
+      </select>
+      <input type="submit" value="Mark Attendance">
+    </form>
+  </div>
+</body>
+</html>

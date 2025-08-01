@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Competition Rule</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="competition-page">
+  <div class="competition-container">
+    <h2>Add Competition Rule</h2>
+
+    <!-- Add Rule Form -->
+    <form action="CompetitionRulesServlet" method="post" class="competition-form">
+      <label>Competition Name:</label>
+      <input type="text" name="comp_name" placeholder="e.g., Drill, Swimming" required>
+
+      <label>Rule Details:</label>
+      <textarea name="rule_text" placeholder="Enter competition rule details" required></textarea>
+
+      <button type="submit">Add Rule</button>
+    </form>
+
+    <!-- View Rules Form -->
+   <form action="ViewCompetitionRulesServlet" method="post" class="competition-form">
+  <button type="submit">View All Rules</button>
+</form>
+
+  </div>
+</body>
+</html>

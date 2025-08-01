@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Competition Mark</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="competition-container">
+    <h2>Add Competition Mark</h2>
+
+    <form action="AddCompetitionMarkServlet" method="post">
+      <label>Reg No:</label>
+      <input type="text" id="regNo" name="reg_no" required><br>
+
+      <label>Event:</label>
+      <select name="event">
+        <option value="drill">Drill</option>
+        <option value="swimming">Swimming</option>
+        <option value="semaphore">Semaphore</option>
+        <option value="shooting">Shooting</option>
+      </select><br>
+
+      <label>Mark:</label>
+      <input type="number" name="mark" min="0" max="100" required><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- ✅ Auto-fill Reg No if redirected -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const regNo = params.get('reg_no');
+    if (regNo) {
+      document.getElementById('regNo').value = regNo;
+    }
+  </script>
+</body>
+</html>
